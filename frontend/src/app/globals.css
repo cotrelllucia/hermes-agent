@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 10, 10, 10;
+  --background-start-rgb: 250, 250, 255;
+  --background-end-rgb: 235, 240, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    135deg,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .verdict-supported {
+    @apply bg-green-100 text-green-800 border-green-300;
+  }
+  .verdict-refuted {
+    @apply bg-red-100 text-red-800 border-red-300;
+  }
+  .verdict-insufficient {
+    @apply bg-amber-100 text-amber-800 border-amber-300;
+  }
+}
